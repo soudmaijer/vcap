@@ -1,10 +1,11 @@
 require 'fileutils'
 require File.join(File.expand_path('../../spring', __FILE__), 'plugin.rb')
 
-# This plugin adds Metro JAX-WS 2.2.3 API jars to the Tomcat endorsed dir.
-class SpringJaxws22Plugin < SpringPlugin
+# This plugin adds Metro 2.1 webservices-api.jar to the Tomcat endorsed dir.
+# Downloaded from: http://download.java.net/maven/2/org/glassfish/metro/metro-standalone/2.1/metro-standalone-2.1.zip
+class SpringMetro21Plugin < SpringPlugin
   def framework
-    'spring_jaxws22'
+    'spring_metro21'
   end
 
   def autostaging_template
